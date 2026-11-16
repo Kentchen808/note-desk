@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>拾頁藏書室｜我的筆記桌</title><style>
+:root{--ink:#332c24;--wine:#682c37;--paper:#faf6eb;--line:#c7bba4;--serif:"Noto Serif TC","PMingLiU",serif}*{box-sizing:border-box}body{margin:0;color:var(--ink);font:16px/1.65 system-ui,sans-serif;background:#eee8da;background-image:repeating-linear-gradient(95deg,transparent 0 72px,#c7bda81a 73px 74px)}header{padding:15px max(5vw,22px);display:flex;align-items:center;gap:12px;background:#faf7ee;border-bottom:1px solid var(--line)}header b{font:700 22px var(--serif);letter-spacing:.12em}header small{font:12px Georgia;letter-spacing:.16em;color:#726353}.logo{font-size:28px;color:var(--wine)}main{max-width:1240px;padding:26px clamp(16px,4vw,48px) 40px;margin:auto}
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:255px;padding:32px 5%;color:#fff5d8;background:radial-gradient(ellipse at 70% 0%,#46675a,#203e36 64%);border-radius:8px 8px 2px 2px;border-bottom:13px ridge #84654b;box-shadow:0 8px 14px #44392224}.hero:before{position:absolute;content:"";inset:12px;border:1px solid #d9c18e66;pointer-events:none}.hero h1{font:700 clamp(33px,4vw,55px)/1.25 var(--serif);letter-spacing:.08em;margin:5px 0 16px}.hero p{font:italic 16px Georgia;color:#e4cea4;margin:0}.hero button{background:#f4e5be;border:1px solid #f1deae;color:#373524}.heroText{position:relative;z-index:2}
+.shelf{position:absolute;right:6%;bottom:0;height:94%;width:38%;display:flex;align-items:end;justify-content:center;gap:3px;filter:drop-shadow(8px 5px 5px #11231d88)}.book{height:80%;width:16%;position:relative;display:grid;place-items:center;writing-mode:vertical-rl;color:#fae7b5;font:600 17px var(--serif);letter-spacing:5px;background:linear-gradient(90deg,#0004,transparent 12%,#fff2 18%,transparent 24%,#0001 85%,#0004),var(--cover);border-radius:5px 4px 1px 1px;border:1px solid #ffffff30}.book:before,.book:after{content:"";position:absolute;left:8%;right:8%;height:5px;border-block:1px solid #e6c584;top:10%}.book:after{top:auto;bottom:8%}.book:nth-child(1){--cover:#803d3e;height:75%;transform:rotate(-10deg);transform-origin:bottom right;margin-right:3%}.book:nth-child(2){--cover:#b18749;height:90%;color:#322c26}.book:nth-child(3){--cover:#385965;height:82%}.book:nth-child(4){--cover:#734a37;height:96%}.book:nth-child(4) i{position:absolute;background:#ce9c50;width:11px;height:34px;right:8px;top:-2px;clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%)}
+.workspace{display:grid;grid-template-columns:185px 1fr;gap:35px;margin-top:36px}aside{border-right:1px solid var(--line);padding-right:18px}h2,h3{font-family:var(--serif)}aside h2{font-size:17px;margin:0 0 12px}button,input,textarea{font:inherit;color:inherit}button{cursor:pointer;border:0;background:transparent;border-radius:5px;padding:7px 12px}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #af7134;outline-offset:2px}nav button{display:flex;width:100%;justify-content:space-between;text-align:left;gap:8px;overflow-wrap:anywhere}nav button[aria-pressed=true]{background:#68313b;color:white}nav button:hover:not([aria-pressed=true]){background:#e3daca}.tools{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:22px}.tools h2{margin:0;font-size:27px}.tools input{border:1px solid var(--line);border-radius:20px;padding:8px 15px;background:#fbf7ed;max-width:100%;width:225px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr));gap:24px 18px}.note{position:relative;display:flex;flex-direction:column;align-items:stretch;text-align:left;border-radius:1px;padding:24px 20px 15px;min-height:205px;background:linear-gradient(165deg,#fff2,transparent),var(--tint);box-shadow:1px 4px 7px #4e402323;transition:transform .15s;overflow-wrap:anywhere}.note:hover{transform:translateY(-3px)}.note:before{content:"";position:absolute;top:-6px;left:38%;width:46px;height:14px;background:repeating-linear-gradient(90deg,#cbb99399 0 2px,#d8c8a899 2px 4px);transform:rotate(-4deg)}.note small{color:#5a5147}.note b{font:700 22px/1.4 var(--serif);margin:7px 0}.excerpt{line-height:1.65;white-space:pre-line;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}.open{font:15px Georgia;text-align:right;margin-top:auto;padding-top:10px}footer{margin-top:34px;font-size:13px;color:#685e50}dialog{width:min(92vw,550px);max-height:90vh;background:#fffcf1;color:var(--ink);border:1px solid #b6a68a;border-radius:10px;padding:24px}dialog::backdrop{background:#22291ed0}dialog h2{margin-top:0}label{display:block;margin:12px 0}label input,textarea{display:block;width:100%;padding:9px;background:#fffdf7;border:1px solid var(--line);border-radius:5px}textarea{min-height:160px;resize:vertical}.actions{display:flex;gap:8px}.primary{background:var(--wine);color:white}.danger{margin-left:auto;color:#822f35}.status{font-size:14px;color:#665b4b}
+@media(max-width:740px){.workspace{grid-template-columns:1fr;gap:18px}aside{border:0;padding:0}nav{display:flex;gap:5px;overflow-x:auto}nav button{width:auto;white-space:nowrap}aside h2{margin-bottom:5px}.hero{min-height:205px}.shelf{right:4%;width:35%;height:82%}.book{font-size:13px;letter-spacing:2px}.hero h1{letter-spacing:0}}@media(max-width:450px){.hero{min-height:175px}.hero h1{font-size:29px}.hero p{font-size:13px}.shelf{width:32%;right:3%;height:75%}.book{width:22%;font-size:12px}.book:first-child{display:none}.tools input{width:100%}}
+</style></head><body>
+<header><span class="logo" aria-hidden="true">❧</span><b>拾頁藏書室</b><small>NOTE LIBRARY</small></header>
+<main><section class="hero"><div class="heroText"><p>The Reading Room</p><h1>我的閱覽桌</h1><button id="add">＋ 寫一張便條</button></div><div class="shelf" aria-hidden="true"><span class="book">散文選</span><span class="book">讀書手記</span><span class="book">自然觀察</span><span class="book">文學拾遺<i></i></span></div></section>
+<div class="workspace"><aside><h2>館藏分類</h2><nav id="tags" aria-label="分類索引"></nav></aside><section><div class="tools"><h2 id="sectionTitle">全部便條</h2><input type="search" id="search" aria-label="搜尋筆記" placeholder="搜尋標題、分類、內文"></div><div id="cards" class="cards"></div><p id="status" class="status" role="status"></p></section></div>
+<footer>筆記保存在目前瀏覽器中。清除網站資料會一併移除筆記。</footer></main>
+<dialog id="editor" aria-labelledby="heading"><form id="form"><h2 id="heading"></h2><label>標題<input id="title" required maxlength="120"></label><label>分類<input id="tag" maxlength="40" placeholder="未分類"></label><label>筆記內容<textarea id="body" required></textarea></label><div class="actions"><button class="primary">儲存便條</button><button type="button" id="cancel">取消</button><button type="button" id="remove" class="danger">刪除</button></div></form></dialog>
+<script>
+const el=id=>document.getElementById(id);
+const key='shiyenotes.v1';
+let notes=[
+ {id:'welcome',tag:'學習方法',title:'康乃爾筆記怎麼用？',body:'上課時，在右欄記下重點。\n下課後，在左欄把重點改寫成問題。\n複習時，遮住右欄，試著回答自己的問題。'},
+ {id:'reading',tag:'閱讀',title:'讀完一章，留下一個問題',body:'摘錄：選一句值得回看的話，記下頁碼。\n想法：用自己的話解釋它。\n提問：這個觀點在哪種情況下可能不適用？'},
+ {id:'field',tag:'觀察',title:'午後的窗邊',body:'同一扇窗，早上照亮書背，午後照亮桌角。下次帶一本書來，記下影子移動了幾頁。'}
+];
+let category='',active=null,canSave=true;
+try{
+ const raw=localStorage.getItem(key);
+ if(raw!==null){
+  const data=JSON.parse(raw);
+  if(!Array.isArray(data)||!data.every(n=>n&&['id','tag','title','body'].every(k=>typeof n[k]==='string')))throw Error();
+  notes=data;
+ }
+}catch{canSave=false;alert('目前無法讀取已存筆記，請檢查瀏覽器的儲存設定。');}
+function persist(next){
+ try{if(!canSave)throw Error();localStorage.setItem(key,JSON.stringify(next));notes=next;return true;}
+ catch{alert('無法儲存，請確認瀏覽器空間與權限。');return false;}
+}
+function node(tag,text,css){
+ const element=document.createElement(tag);element.textContent=text;if(css)element.className=css;return element;
+}
+function openEditor(note){
+ active=note?.id??null;el('heading').textContent=note?'編輯便條':'寫一張便條';
+ for(const k of ['title','tag','body'])el(k).value=note?.[k]??(k==='tag'?category:'');
+ el('remove').hidden=!note;el('editor').showModal();el('title').focus();
+}
+function render(){
+ const tags=[...new Set(notes.map(n=>n.tag))].sort();
+ if(!tags.includes(category))category='';
+ el('tags').replaceChildren();
+ for(const tag of ['',...tags]){
+  const btn=node('button',tag||'全部便條');btn.append(node('span',tag?notes.filter(n=>n.tag===tag).length:notes.length));
+  btn.setAttribute('aria-pressed',String(tag===category));btn.onclick=()=>{category=tag;render();};el('tags').append(btn);
+ }
+ const q=el('search').value.trim().toLowerCase();
+ const visible=notes.filter(n=>(!category||category===n.tag)&&[n.title,n.tag,n.body].some(s=>s.toLowerCase().includes(q)));
+ el('sectionTitle').textContent=category||'全部便條';el('cards').replaceChildren();
+ for(const n of visible){
+  const card=node('button','','note');
+  card.style.setProperty('--tint',['#f2dfa0','#e6c4ba','#cddcc4','#cadce4'][notes.indexOf(n)%4]);
+  card.append(node('small',n.tag),node('b',n.title),node('span',n.body,'excerpt'),node('span','打開 ↗','open'));
+  card.onclick=()=>openEditor(n);el('cards').append(card);
+ }
+ el('status').textContent=visible.length?'共 '+visible.length+' 張便條':notes.length?'沒有符合的便條，請更換關鍵字或分類。':'桌上還沒有便條，寫下第一張吧。';
+}
+el('form').onsubmit=e=>{
+ e.preventDefault();
+ const note={id:active??crypto.randomUUID(),title:el('title').value.trim(),tag:el('tag').value.trim()||'未分類',body:el('body').value.trim()};
+ if(!note.title||!note.body){alert('請填寫標題和內文。');return;}
+ if(persist([note,...notes.filter(n=>n.id!==active)])){category='';el('search').value='';el('editor').close();render();}
+};
+el('remove').onclick=()=>{if(confirm('確定刪除這張便條？')&&persist(notes.filter(n=>n.id!==active))){el('editor').close();render();}};
+el('add').onclick=()=>openEditor();el('cancel').onclick=()=>el('editor').close();el('search').oninput=render;render();
+</script></body></html>
